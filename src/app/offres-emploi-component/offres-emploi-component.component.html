@@ -1,0 +1,17 @@
+<p>offres-emploi-component works!</p><br>
+<form> <p> rechercher par entreprise :</p>
+    <input type="text" placeholder="focus"></form>
+<div class="col-md-4" style="width: 18rem;"*ngFor=" let l of listEmpoi,let i =index">
+    <div class="card-body">
+    
+    <p class="card-text">reference : {{l.reference}}</p>
+    <p class="card-text">titre : {{l.titre}}</p>
+    <p class="card-text">etat : {{l.etat}}</p>
+    
+
+
+    <button href="#" class="btn btn-primary"(click)="postuler(i)"[disabled]="l.etat==false"> postuler</button>
+       
+    </div><br>
+    <button href="#" class="btn btn-primary"> bilan</button>
+      

@@ -1,0 +1,25 @@
+
+<input type="text" name ="categorie"[(ngModel)]="trv">
+
+<div class="col-md-4" style="width: 18rem;"*ngFor=" let l of listArticle">
+    <div *ngIf="l.categorie!='travail'">
+    <div class="card-body">
+        
+        <fieldset style="border: 1px black solid">
+
+            <legend  class="card-text">titre : {{l.titre}}</legend>
+            <p class="card-text">date : {{l.date}}</p>
+            <p class="card-text">contenu : {{l.contenu}}</p>
+            <p class="card-text">auteur : {{l.auteur}}</p>
+            <p class="card-text">categorie : {{l.categorie}}</p>
+            <button  class="btn btn-primary" routerLink="['/arti
+            ,l.categorie']"> bilan</button>
+          </fieldset>
+        </div>
+    </div>
+  </div><br>
+  <input type="number" placeholder="2"[(ngModel)]="nbr">
+  
+  <div class="col-md-4" style="width: 18rem;"*ngFor=" let l of listArticle">
+    <div *ngIf="nbr>listArticle.length">
+    
